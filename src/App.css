@@ -1,0 +1,12 @@
+/* Reserve space for a fixed navbar (h-16 == 4rem) */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 4rem; /* match navbar height */
+}
+
+/* Ensure root container spans full width so fixed nav appears across the viewport */
+html, body, #root {
+  width: 100%;
+}
