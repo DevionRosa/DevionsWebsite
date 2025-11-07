@@ -1,5 +1,5 @@
 import './App.css'
-import Navbar from './components/NavBar'
+import Navbar from './components/Navbar'
 import ProjectList from './components/Projects'
 import headshot from './assets/headshot.jpg'
 
@@ -28,7 +28,7 @@ function App() {
       {/* Resume */}
       <div>
         <section id = "resume">
-
+          <button>View Resume</button>
         </section>
       </div>
 
@@ -39,10 +39,26 @@ function App() {
         </section>
       </div>
 
+      {/* About Me */}
+      <div>
+        <section id ="about">
+          <p>
+            Since I was 3, I loved my computer. I never felt bored with the endless amount of knowledge at my fingertips. In high school, 
+            I listened to the calling I've had my entire life and took my first coding class. From that point forward, 
+            I saw myself in front of the screen more than ever. <br></br>
+            
+            I have always been pushed by my parents to give my best effort in everything I do, and that mindset has shaped how I approach 
+            challenges. Combining my drive with my love for computers kept me learning and improving. Not only does technology challenge me 
+            but it gives me the power to contribute and transform the world.
+            </p>
+        </section>
+      </div>
+
       {/* Contact */}
       <div>
         <section id ="contact">
-          
+          <a>devionrosa@gmail.com</a>
+          <a>LinkedIn</a>
         </section>
       </div>
     </>

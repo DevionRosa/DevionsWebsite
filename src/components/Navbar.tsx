@@ -7,10 +7,11 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Menu */}
           <div className="space-x-6 hidden md:flex">
-            <a href="#home" className="hover:text-gray-200">About Me</a>
-            <a href="#about" className="hover:text-gray-200">Resume</a>
-            <a href="#services" className="hover:text-gray-200">Projects</a>
+            
+            <a href="#projects" className="hover:text-gray-200">Projects</a>
+            <a href="#about" className="hover:text-gray-200">About Me</a>
             <a href="#contact" className="hover:text-gray-200">Contact</a>
+            
           </div>
           
           {/* Hamburger for mobile */}
