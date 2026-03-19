@@ -67,19 +67,40 @@ const projects: { [key: string]: Project } = {
 
 const ProjectList: React.FC = () => {
   return (
-    <div className="space-y-4 p-4">
+    <div className="space-y-4 p-4 flex flex-col items-center">
       {Object.keys(projects).map((key) => (
-        <div key={key} className="border p-4 rounded shadow">
-          <h2 className="text-xl font-bold">{projects[key].name}</h2>
-          <p>{projects[key].description}</p>
-          <img
-            src={projects[key].img}
-            alt={projects[key].name}
+        <div key={key} className="p-6 shadow w-3/4 mx-auto flex gap-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          
+          {/* LEFT SIDE: The Image */}
+          <div className="flex-shrink-0">
+            <img
+              src={projects[key].img}
+              alt={projects[key].name}
+              
+              className="w-40 h-40 border-4 border-purple-950 rounded-md shadow object-cover"
+            />
+          </div>
+
+          {/* RIGHT SIDE: The Text and Link */}
+          <div className="flex flex-col flex-grow">
+            {/* Project Name and Description grouped together */}
+            <h2 className="text-2xl font-bold">{projects[key].name}</h2>
+            <p className="mt-2 mb-4 flex-grow">
+              {projects[key].description}
+            </p>
             
-          />
-          <a href={projects[key].link} className="text-blue-500 hover:underline">
-            View Project
-          </a>
+            {/* View Project Link/Button */}
+            {/* Added styling to make the link look more like a button */}
+            <div className="mt-auto">
+              <a
+                href={projects[key].link}
+                className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 hover:shadow-xl transition-colors duration-200"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+
         </div>
       ))}
     </div>
