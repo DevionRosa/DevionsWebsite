@@ -99,10 +99,10 @@ const ProjectList: React.FC = () => {
               {projects[key].description}
             </p>
             
-            <div className="mt-6 md:mt-auto">
+            <div className="mt-6 md:mt-auto pt-6">
               <a
                 href={projects[key].link}
-                className="inline-block px-6 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-500 hover:shadow-lg transition-all duration-200"
+                className="inline-block px-6 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-500 hover:shadow-lg transition-all duration-200"
               >
                 View Project
               </a>
