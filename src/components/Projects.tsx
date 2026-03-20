@@ -38,7 +38,7 @@ const projects: { [key: string]: Project } = {
     description: "When playing unfamiliar or familiar games scouring the wiki to look for specific items takes too much time out of your gameplay. To combat this I developed a discord bot that utilizes web scraping and natural language processing (NLP) to cut down on the time spent viewing the wiki, while also getting the information you need to have a successful playthrough.",
     link: "https://github.com/DevionRosa/Discord-Bot",
     img: new URL("../assets/DiscordBotimg.png", import.meta.url).href,
-    tech: ["Python", "NextCord", "BeautifulSoup", "SentenceTransformer", "Numpy", "Pickle"],
+    tech: ["Python", "NextCord", "BeautifulSoup", "Sentence Transformer", "Numpy", "Pickle"],
   },
 
   project5: {

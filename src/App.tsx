@@ -15,9 +15,10 @@ function App() {
         {/* Header Section */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-6xl font-bold pb-4">Hello, I'm Devion👋</h1>
-        
-          <div className="text-3xl font-semibold text-purple-950">
-            I'm a {' '}
+          <div className="text-3xl font-semibold text-white flex gap-x-2">
+          I'm a 
+          <div className="text-purple-950">
+            {' '}
             <span>
               <Typewriter
                 words={['Software Engineer', 'Team Leader', 'ML Enthusiast']}
@@ -29,6 +30,7 @@ function App() {
                 delaySpeed={1500}
               />
             </span>
+          </div>
           </div>
         </div>
         <hr className="border-t border-purple-950 my-12" />
