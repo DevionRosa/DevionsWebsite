@@ -3,6 +3,7 @@ import { Typewriter } from 'react-simple-typewriter'
 import Navbar from './components/Navbar'
 import ProjectList from './components/Projects'
 import headshot from './assets/headshot.jpg'
+import Experience from './components/Work'
 
 function App() {
   return (
@@ -35,7 +36,8 @@ function App() {
         </div>
         <hr className="border-t border-purple-950 my-12" />
 
-          {/* About Me Section */}
+
+        {/* About Me Section */}
         <section id="about" className="py-12 text-center scroll-mt-20">
           <h2 className="text-6xl font-bold mb-12">About Me</h2>
           
@@ -65,6 +67,12 @@ function App() {
               </div>
             </div>
           
+        </section>
+
+        {/* Work Section */}
+        <section id="work" className="py-12 text-center scroll-mt-20">
+          <h2 className="text-6xl font-bold mb-12">Professional Experience</h2>
+          <Experience />
         </section>
 
         {/* Resume Section
