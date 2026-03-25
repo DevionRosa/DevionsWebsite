@@ -14,29 +14,17 @@ const works: { [key: string]: Work } = {
         position: "Software Engineer Intern",
         dates: "Incoming Summer 2026",
         description: [],
-        logo: new URL("", import.meta.url).href,
+        logo: new URL("../assets/walmart_logo.jpg", import.meta.url).href,
     },
 
     work2:{
         company: "Sponsors For Educational Opportunity",
         position: "Tech Developer Intern",
         dates: "Jun. 2025 - Aug. 2025",
-        description: [],
-        logo: new URL("", import.meta.url).href,
-    },
-     work3:{
-        company: "Sponsors For Educational Opportunity",
-        position: "Tech Developer Intern",
-        dates: "Jun. 2025 - Aug. 2025",
-        description: [],
-        logo: new URL("", import.meta.url).href,
-    },
-    work4:{
-        company: "Sponsors For Educational Opportunity",
-        position: "Tech Developer Intern",
-        dates: "Jun. 2025 - Aug. 2025",
-        description: [],
-        logo: new URL("", import.meta.url).href,
+        description: ["Engaged in SCRUM-like teams to design, test, and implement full-stack applications using Flask, MySQL, Firebase, React, Tailwind, and API integrations",
+                      "Led the back-end development of a representative tracker that uses Congress’s API to educate users on local officials",
+                      "Utilized full-stack development to create an AI-powered app designed to limit food waste by creating personalized meals"],
+        logo: new URL("../assets/seo_logo.png", import.meta.url).href,
     },
 };
 
@@ -64,7 +52,7 @@ const Experience = () => {
             >
               {/* Logo Circle */}
               <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center overflow-hidden shrink-0">
-                <img src={works[key].logo} alt={works[key].company} className="w-10 h-10 object-contain" />
+                <img src={works[key].logo} alt={works[key].company} className="w-17 h-17 object-contain" />
               </div>
 
               {/* Text Info */}
@@ -78,19 +66,19 @@ const Experience = () => {
       </div>
 
       {/* RIGHT SIDE: Detail Panel */}
-      <div className="flex-1 bg-[#0f0f25] border border-white/5 rounded-2xl p-10 shadow-2xl">
+      <div className="flex-1 bg-purple-900/20 border border-white/5 rounded-2xl p-10 shadow-2xl">
         <h2 className="text-3xl font-bold text-white mb-2">{activeWork.position}</h2>
         <p className="text-slate-400 text-xl mb-6">{activeWork.company}</p>
         
         <p className="text-slate-500 font-medium mb-8">{activeWork.dates}</p>
 
-        <ul className="list-disc list-inside space-y-4">
+        <ul className="list-disc list-outside ml-5 space-y-4">
           {activeWork.description.map((point, i) => (
-            <li key={i} className="text-slate-200 text-lg">
+            <li key={i} className="text-slate-200 text-lg pl-2">
               {point}
             </li>
           ))}
-        </ul>
+        </ul> 
       </div>
     </div>
   );
