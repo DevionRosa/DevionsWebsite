@@ -88,6 +88,10 @@ function App() {
           <ProjectList />
         </section>
 
+        <section id="skills" className="py-12 scroll-mt-20">
+          <h2 className="text-6xl font-bold mb-12">Skills</h2>
+          <p>In progress!!</p>
+        </section>
       
 
         {/* Contact Section */}
