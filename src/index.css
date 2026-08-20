@@ -21,7 +21,7 @@ html, body, #root {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #020208;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,7 +30,6 @@ html, body, #root {
 
   margin: 0 auto;
   text-align: center;
-  padding-top: 4rem;
 }
 
 html {
@@ -56,6 +55,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #020208; /* fallback while WebGL galaxy initializes */
 }
 
 h1 {

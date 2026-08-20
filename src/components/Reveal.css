@@ -1,0 +1,32 @@
+.reveal--scroll {
+  transition: none;
+}
+
+.reveal {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s),
+    visibility 0s linear 0.8s;
+}
+
+.reveal.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s),
+    visibility 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

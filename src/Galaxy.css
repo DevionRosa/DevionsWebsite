@@ -1,0 +1,28 @@
+.galaxy-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Used when the Galaxy component is mounted as the site background.
+   - position: fixed so it stays in the viewport while scrolling
+   - inset: 0 to cover the full viewport (avoids the 100vw-scrollbar overflow trap)
+   - pointer-events: none so mouse interactions fall through to underlying elements
+   - Note: NO z-index set. Using z-index:-1 here would paint the galaxy behind
+     the document-root stacking context's element-bg layer, and the opaque
+     <body> background (#020208 in dark mode) covers it entirely.
+     With z-auto, the layer paints AFTER body bg (step 6), so the canvas —
+     even where it's transparent — composites correctly. */
+.galaxy-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Defensive: ensure the inner WebGL <canvas> never captures pointer events.
+   OGL's renderer.setSize already sizes the canvas pixel buffer to its
+   container, so no CSS dimensions are needed here. */
+.galaxy-bg canvas {
+  display: block;
+  pointer-events: none;
+}

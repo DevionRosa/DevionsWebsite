@@ -12,8 +12,9 @@ const works: { [key: string]: Work } = {
     work1:{
         company: "Walmart",
         position: "Software Engineer Intern",
-        dates: "Incoming Summer 2026",
-        description: [],
+        dates: "Jun. 2026 - Aug. 2026",
+        description: ["Expanded an agent to cover 100% of the dataset, improving depth while reducing redundant processing", 
+                      "Developed an evaluation framework to benchmark agent quality across reasoning, tool execution, latency, and token efficiency, enabling repeatable release gates and data-driven model selection"],
         logo: new URL("../assets/walmart_logo.jpg", import.meta.url).href,
     },
 
